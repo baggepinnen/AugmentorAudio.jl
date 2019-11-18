@@ -1,9 +1,9 @@
 @testset "Amplify" begin
-    @test typeof(@inferred(Amplify(2))) <: Amplify <: ArrayOperation
+    @test typeof(@inferred(Amplify(2))) <: Amplify <: Augmentor.ArrayOperation
     @testset "constructor" begin
         @test str_show(Amplify(2)) == "Augmentor.Amplify(2)"
         @test str_showconst(Amplify(2)) == "Amplify(2)"
-        @test str_showcompact(Amplify(2)) == "Amplify signal"
+        @test str_showcompact(Amplify(2)) == "Amplify signal 2"
     end
     @testset "eager" begin
         @test_throws MethodError Augmentor.applyeager(Amplify(2), nothing)

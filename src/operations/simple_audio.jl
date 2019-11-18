@@ -38,7 +38,7 @@ julia> sig_new = augment(sig, Amplify(-1))
  -4
 ```
 """
-struct Amplify{T<:Number} <: ArrayOperation
+struct Amplify{T<:Number} <: Augmentor.ArrayOperation
     p::T
 end
 
@@ -55,7 +55,7 @@ end
 
 function Base.show(io::IO, op::Amplify)
     if get(io, :compact, false)
-        print(io, "Amplify signal")
+        print(io, "Amplify signal $(op.p)")
     else
         print(io, "Augmentor.")
         showconstruction(io, op)

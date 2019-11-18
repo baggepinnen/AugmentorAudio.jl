@@ -1,7 +1,7 @@
 @testset "LinearFilter" begin
     sig = collect(1.:100)
     df = digitalfilter(Lowpass(0.4), Butterworth(2))
-    @test typeof(@inferred(LinearFilter(df))) <: LinearFilter <: ArrayOperation
+    @test typeof(@inferred(LinearFilter(df))) <: LinearFilter <: Augmentor.ArrayOperation
     @testset "constructor" begin
         @test str_show(LinearFilter(df)) == "Augmentor.LinearFilter(ZeroPoleGain{Complex{Float64},Complex{Float64},Float64}(Complex{Float64}[-1.0 + 0.0im, -1.0 + 0.0im], Complex{Float64}[0.18476368867562076 + 0.40209214367208346im, 0.18476368867562076 - 0.40209214367208346im], 0.20657208382614792))"
     end

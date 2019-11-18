@@ -11,7 +11,7 @@ import Augmentor:
 using Augmentor: plain_array
 
 include("types.jl")
-export ArrayOperation
+# export ArrayOperation
 
 include("operations/simple_audio.jl")
 export Amplify

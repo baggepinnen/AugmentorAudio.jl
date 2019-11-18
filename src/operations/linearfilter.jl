@@ -42,7 +42,7 @@ julia> sig_new = augment(sig, filter)'
  0.0  0.206572  0.489478  0.55357  0.521856  0.497587  0.494828  0.498562
 ```
 """
-struct LinearFilter{T<:DSP.FilterCoefficients} <: ArrayOperation
+struct LinearFilter{T<:DSP.FilterCoefficients} <: Augmentor.ArrayOperation
     filter::T
 end
 
