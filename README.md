@@ -7,6 +7,11 @@ An audio extension of [Augmentor.jl](https://github.com/baggepinnen/Augmentor.jl
 
 ```julia
 using Pkg
-Pkg.add("https://github.com/baggepinnen/Augmentor.jl")
-Pkg.add("https://github.com/baggepinnen/AugmentorAudio.jl")
+pkg"add https://github.com/baggepinnen/Augmentor.jl"
+pkg"add https://github.com/baggepinnen/AugmentorAudio.jl"
+
+# or
+using Pkg
+pkg"dev https://github.com/baggepinnen/Augmentor.jl"
+pkg"dev https://github.com/baggepinnen/AugmentorAudio.jl"
 ```

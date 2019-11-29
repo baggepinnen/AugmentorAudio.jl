@@ -15,6 +15,10 @@ include("types.jl")
 
 include("operations/simple_audio.jl")
 export Amplify
+
 include("operations/linearfilter.jl")
 export LinearFilter
+
+include("operations/additive_noise.jl")
+export GaussianNoise, RandomSinus
 end # module

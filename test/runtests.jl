@@ -13,13 +13,14 @@ str_showcompact(obj) = @io2str show(IOContext(::IO, :compact=>true), obj)
 str_showconst(obj) = @io2str Augmentor.showconstruction(::IO, obj)
 
 
-testsig = randn(100)
-testsig2 = sin.(1:100)
-testsig3 = sin.(1:100) .+ sin.(0.1 .* (1:100))
+testsig = randn(1000)
+testsig2 = sin.(1:1000)
+testsig3 = sin.(1:1000) .+ sin.(0.1 .* (1:1000))
 
 tests = [
     "operations/tst_simpleaudio.jl",
     "operations/tst_linearfilter.jl",
+    "operations/tst_noise.jl",
 ]
 
 
