@@ -17,7 +17,8 @@ pkg"dev https://github.com/baggepinnen/AugmentorAudio.jl"
 ```
 
 # Operations
+- `Amplify(factor)` yep, it does what it sounds like. 
 - `GaussianNoise(power)` add gaussian noise to signal
 - `RandomSinus(arange=(0,1), frange=(0,0.5), logspace=true)` add a random sinusoid to the signal. Specify frequency and amplitude range and whether to sample frequency log-spaced.
-- `Mixup(path_to_files),Mixup(vector_of_signals)` provide a path to a folder with signals or a vector of signals. A random signal is drawn and added to the input.
+- `Mixup(path_to_files, wrap=false),Mixup(vector_of_signals, wrap=false)` provide a path to a folder with signals or a vector of signals. A random signal is drawn and added to the input. If `wrap`, a short signal is repeated several times to cover the input.
 - `LinearFilter(::DSP.FilterCoefficients)` Filter the input through a specified linear filter.
