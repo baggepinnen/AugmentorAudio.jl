@@ -8,7 +8,7 @@ version = "0.5.0"
 
 [[Augmentor]]
 deps = ["ColorTypes", "ComputationalResources", "CoordinateTransformations", "DSP", "FileIO", "FixedPointNumbers", "IdentityRanges", "ImageCore", "ImageFiltering", "ImageInTerminal", "ImageMagick", "ImageTransformations", "Interpolations", "LinearAlgebra", "MLDataPattern", "MappedArrays", "OffsetArrays", "Random", "Rotations", "StaticArrays", "Statistics"]
-git-tree-sha1 = "48c79d1bbd09a49e6459a869e666500c7fd29f18"
+git-tree-sha1 = "e740243931b3990461ac10ac5afc6ab66d5d33dd"
 repo-rev = "master"
 repo-url = "https://github.com/baggepinnen/Augmentor.jl"
 uuid = "0612f1b9-51e2-5127-9fc2-313c368ba66d"
@@ -84,10 +84,9 @@ uuid = "150eb455-5306-5404-9cee-2592286d6298"
 version = "0.5.0"
 
 [[Crayons]]
-deps = ["Test"]
-git-tree-sha1 = "f621b8ef51fd2004c7cf157ea47f027fdeac5523"
+git-tree-sha1 = "cb7a62895da739fe5bb43f1a26d4292baf4b3dc0"
 uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
-version = "4.0.0"
+version = "4.0.1"
 
 [[CustomUnitRanges]]
 deps = ["Test"]
@@ -108,29 +107,17 @@ version = "1.1.0"
 
 [[DataStructures]]
 deps = ["InteractiveUtils", "OrderedCollections"]
-git-tree-sha1 = "1fe8fad5fc84686dcbc674aa255bc867a64f8132"
+git-tree-sha1 = "a1b652fb77ae8ca7ea328fa7ba5aa151036e5c10"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
-version = "0.17.5"
+version = "0.17.6"
 
 [[Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
-[[DeepDiffs]]
-deps = ["Compat"]
-git-tree-sha1 = "cd4648e98d5625c75b9ebbec516533ec1250ce57"
-uuid = "ab62b9b5-e342-54a8-a765-a90f495de1a6"
-version = "1.1.0"
-
 [[DelimitedFiles]]
 deps = ["Mmap"]
 uuid = "8bb1440f-4735-579b-a4ab-409b98df4dab"
-
-[[Distances]]
-deps = ["LinearAlgebra", "Statistics"]
-git-tree-sha1 = "23717536c81b63e250f682b0e0933769eecd1411"
-uuid = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
-version = "0.8.2"
 
 [[Distributed]]
 deps = ["Random", "Serialization", "Sockets"]
@@ -150,9 +137,9 @@ version = "1.1.0"
 
 [[FileIO]]
 deps = ["Pkg"]
-git-tree-sha1 = "351f001a78aa1b7ad2696e386e110b5abd071c71"
+git-tree-sha1 = "6c976460b85527d22d979682222d36767d95e27f"
 uuid = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
-version = "1.0.7"
+version = "1.1.0"
 
 [[FixedPointNumbers]]
 git-tree-sha1 = "d14a6fa5890ea3a7e5dcab6811114f132fec2b4b"
@@ -267,15 +254,14 @@ version = "0.4.3"
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
 [[NaNMath]]
-deps = ["Compat"]
-git-tree-sha1 = "ce3b85e484a5d4c71dd5316215069311135fa9f2"
+git-tree-sha1 = "928b8ca9b2791081dc71a51c55347c27c618760f"
 uuid = "77ba4419-2d1f-58cd-9bb1-8ffee604a2e3"
-version = "0.3.2"
+version = "0.3.3"
 
 [[OffsetArrays]]
-git-tree-sha1 = "1af2f79c7eaac3e019a0de41ef63335ff26a0a57"
+git-tree-sha1 = "1ae707306f6e33dbb37d0742e08828562772b73f"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "0.11.1"
+version = "0.11.2"
 
 [[OrderedCollections]]
 deps = ["Random", "Serialization", "Test"]
@@ -291,9 +277,9 @@ version = "0.4.2"
 
 [[Parsers]]
 deps = ["Dates", "Test"]
-git-tree-sha1 = "c56ecb484f286639f161e712b8311f5ab77e8d32"
+git-tree-sha1 = "0139ba59ce9bc680e2925aec5b7db79065d60556"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "0.3.8"
+version = "0.3.10"
 
 [[Pkg]]
 deps = ["Dates", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "UUIDs"]
@@ -333,12 +319,6 @@ deps = ["Pkg"]
 git-tree-sha1 = "7b1d07f411bc8ddb7977ec7f377b97b158514fe0"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "0.2.0"
-
-[[ReferenceTests]]
-deps = ["DeepDiffs", "Distances", "FileIO", "ImageCore", "ImageInTerminal", "Random", "SHA", "Test"]
-git-tree-sha1 = "23c17d298c47df63dc522ec759000d394234a83f"
-uuid = "324d217c-45ce-50fc-942e-d289b448e8cf"
-version = "0.8.2"
 
 [[Requires]]
 deps = ["Test"]
@@ -425,6 +405,12 @@ deps = ["Compat"]
 git-tree-sha1 = "c9d5aa108588b978bd859554660c8a5c4f2f7669"
 uuid = "81def892-9a0e-5fdd-b105-ffc91e053289"
 version = "1.1.3"
+
+[[WAV]]
+deps = ["Base64", "FileIO", "Libdl", "Logging"]
+git-tree-sha1 = "dfbbce73a5458898752a26ec945ef8f0b93e1dcf"
+uuid = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
+version = "1.0.3"
 
 [[WoodburyMatrices]]
 deps = ["LinearAlgebra", "Random", "SparseArrays", "Test"]
