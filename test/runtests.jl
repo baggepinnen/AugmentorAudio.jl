@@ -1,4 +1,5 @@
 using   DSP,
+        WAV,
         MappedArrays,
         Random,
         Statistics
@@ -21,6 +22,7 @@ tests = [
     "operations/tst_simpleaudio.jl",
     "operations/tst_linearfilter.jl",
     "operations/tst_noise.jl",
+    "operations/tst_mixup.jl",
 ]
 
 

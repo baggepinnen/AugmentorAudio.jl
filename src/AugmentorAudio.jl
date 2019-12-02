@@ -1,5 +1,5 @@
 module AugmentorAudio
-using Augmentor, DSP, MappedArrays
+using Augmentor, DSP, WAV, MappedArrays
 
 import Augmentor:
     applylazy,
@@ -21,4 +21,7 @@ export LinearFilter
 
 include("operations/additive_noise.jl")
 export GaussianNoise, RandomSinus
+
+include("operations/mixup.jl")
+export Mixup
 end # module
