@@ -86,7 +86,7 @@ function applysig(m::Mixup, sig, input)
             for i in eachindex(input)
                 input[i] += sig[si]
                 si += 1
-                si >= ns && (si = 1)
+                si > ns && (si = 1)
             end
         else
             input[startind:endind] .+= sig
