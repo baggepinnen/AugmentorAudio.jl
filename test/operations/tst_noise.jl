@@ -48,3 +48,31 @@
         @test Augmentor.supports_permute(GaussianNoise) === false
     end
 end
+
+
+
+
+
+@testset "AlphaSubGaussianNoise" begin
+    @test typeof(@inferred(AlphaSubGaussianNoise(100))) <: AlphaSubGaussianNoise <: Augmentor.ArrayOperation
+    @testset "eager" begin
+        @test Augmentor.supports_eager(AlphaSubGaussianNoise) === true
+        @testset "single signal" begin
+            res = @inferred(Augmentor.applyeager(AlphaSubGaussianNoise(length(testsig)), testsig))
+            @test std(res-testsig) ≈ 2 atol = 0.5
+            @test typeof(res) == typeof(testsig)
+        end
+    end
+    @testset "lazy" begin
+        @test Augmentor.supports_lazy(AlphaSubGaussianNoise) === false
+    end
+    @testset "view" begin
+        @test Augmentor.supports_view(AlphaSubGaussianNoise) === false
+    end
+    @testset "stepview" begin
+        @test Augmentor.supports_stepview(AlphaSubGaussianNoise) === false
+    end
+    @testset "permute" begin
+        @test Augmentor.supports_permute(AlphaSubGaussianNoise) === false
+    end
+end

@@ -112,3 +112,64 @@ end
 
 
 # ---------------------------------------------------------------------
+
+"""
+    AlphaSubGaussianNoise <: Augmentor.ArrayOperation
+
+Description
+--------------
+
+Adds alpha sub-gaussian noise to a signal. Provide the length `n` of the signal.
+
+
+Usage
+--------------
+
+    AlphaSubGaussianNoise(n, α=1.5)
+    AlphaSubGaussianNoise(asg::AlphaSubGaussian)
+
+Arguments
+--------------
+
+
+
+Examples
+--------------
+    AlphaSubGaussianNoise(96000, α=1.5)
+
+"""
+struct AlphaSubGaussianNoise{T<:AlphaSubGaussian, V<:AbstractArray} <: Augmentor.ArrayOperation
+    asg::T
+    storage::V
+end
+function AlphaSubGaussianNoise(asg::AlphaSubGaussian{T}) where T
+    storage = zeros(T, asg.n)
+    AlphaSubGaussianNoise(asg,storage)
+end
+
+function AlphaSubGaussianNoise(n, α=1.5)
+    AlphaSubGaussianNoise(AlphaSubGaussian(n=n, α=α))
+end
+
+@inline supports_stepview(::Type{AlphaSubGaussianNoise}) = false
+@inline supports_lazy(::Type{AlphaSubGaussianNoise}) = false
+
+
+applyeager(op::AlphaSubGaussianNoise, input::AbstractArray, param) = plain_array(rand!(op.asg, op.storage) .+ input)
+
+
+function showconstruction(io::IO, op::AlphaSubGaussianNoise)
+    print(io, typeof(op).name.name, "($(op.asg))")
+end
+
+function Base.show(io::IO, op::AlphaSubGaussianNoise)
+    if get(io, :compact, false)
+        print(io, "AlphaSubGaussianNoise signal")
+    else
+        print(io, "AugmentorAudio.")
+        showconstruction(io, op)
+    end
+end
+
+
+# ---------------------------------------------------------------------

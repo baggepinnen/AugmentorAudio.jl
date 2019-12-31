@@ -4,6 +4,7 @@ authors = ["Fredrik Bagge Carlson <baggepinnen@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+AlphaStableDistributions = "f20549b4-2d50-407f-863c-cdd202ba59a3"
 Augmentor = "0612f1b9-51e2-5127-9fc2-313c368ba66d"
 DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
